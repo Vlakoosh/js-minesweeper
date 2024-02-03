@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="font" href="fonts/RobotoMono-Bold.ttf">
+    <link rel="font" href="fonts/digital-7.ttf">
+    <script src="app.js"></script>
+</head>
+<body oncontextmenu="return false;">
+<div id="game">
+    <div class="container">
+        <div>
+            <div class="counter" id="flags-left">000</div>
+            <div class="border"><button id="reset-button" onclick="location.reload()"><img id="smiley" src="images/neutral.png" alt="face"></button></div>
+            <div class="counter" id="timer">000</div>
+        </div>
+
+        <div class="grid"></div>
+    </div>
+</div>
+</body>
+</html>

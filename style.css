@@ -1,0 +1,133 @@
+#game {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 356px;
+    height: 456px;
+    border: 5px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    background-color: #C0C0C0;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.grid {
+    height: 316px;
+    width: 316px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 15px;
+
+    background-color: #C0C0C0;
+    border: 8px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    box-sizing: border-box;
+}
+
+div {
+    font-size: 25px;
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+}
+
+.counter {
+    border: 5px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    box-sizing: border-box;
+    margin: 15px 15px 0;
+}
+
+.empty, .bomb, .checked, .checked-bomb{
+    width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.checked-bomb {
+    border: 2px solid #808080;
+    font-size: 18px;
+}
+
+.checked {
+    border: 2px solid #808080;
+    font-size: 21px;
+}
+
+img {
+    position: relative;
+    top: 3px;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+}
+
+#smiley {
+    width: 47px;
+    height: 47px;
+    top: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: "Digital 7";
+    src: url("fonts/digital-7.ttf");
+}
+
+.counter {
+    background-color: black;
+    color: darkred;
+    font-family: "Digital 7";
+    font-size: 2em;
+    width: 100px;
+    height: 68px;
+}
+
+#reset-button {
+    width: 66px;
+    height: 66px;
+    border: 6px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    box-sizing: border-box;
+    background-color: #C0C0C0;
+}
+
+#reset-button:hover {
+    background-color: #d0d0d0;
+}
+
+#reset-button:active {
+    background-color: #8f8f8f;
+    border-color: #808080 #FFFFFF #FFFFFF #808080
+}
+
+#timer {
+    float: right;
+}
+
+#flags-left {
+    float: left;
+    padding-bottom: 10px;
+}
+
+
+.border {
+    width: 68px;
+    height: 68px;
+    border: 2px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 15px;
+}
