@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let flagCount = 0;
     let tiles = []
     let isGameOver = false;
+    let time = 0;
 
     //Create board
     function createBoard() {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         for (let i = 0; i < width*height; i++){
             const tile = document.createElement('div');
-            tile.id = i;
+            tile.id = i.toString();
             tile.classList.add(shuffledArray[i]);
             grid.appendChild(tile);
             tiles.push(tile);
@@ -83,6 +84,14 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     createBoard();
+    const timeTimeout = setInterval(updateTime, 1000)
+
+    function updateTime() {
+        const timer = document.querySelector("#timer");
+        timer.innerHTML = pad(time, 3);
+        console.log(time)
+        time++;
+    }
 
     //add flag with right click
     function addFlag(tile) {
@@ -195,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     function endGame() {
         //result.innerHTML = 'Game Over!'
         isGameOver = true;
-
+        clearInterval(timeTimeout)
         //show all the bombs
         tiles.forEach(function (tile) {
             if (tile.classList.contains('bomb')){
@@ -221,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         if (matches === bombCount){
             console.log("you win")
             smileyFace.src = "images/win.png"
+            clearInterval(timeTimeout)
         }
 
     }
