@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const width = 10;
     const height = 10;
 
-    let bombCount = 20;
+    let bombCount = 15;
     let flagCount = 0;
     let tiles = []
     let isGameOver = false;
